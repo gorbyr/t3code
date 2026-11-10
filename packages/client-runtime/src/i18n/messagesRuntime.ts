@@ -16,6 +16,20 @@ export const enMessages = {
   "envMode.worktree": "New worktree",
 } as const;
 
+export const jaMessages: Partial<Record<keyof typeof enMessages, string>> = {
+  "runtimeMode.approvalRequired.label": "監視中",
+  "runtimeMode.approvalRequired.description": "コマンドやファイル変更の前に確認します。",
+  "runtimeMode.autoAcceptEdits.label": "編集を自動承認",
+  "runtimeMode.autoAcceptEdits.description": "編集を自動承認し、その他の操作は確認します。",
+  "runtimeMode.auto.label": "自動",
+  "runtimeMode.auto.description":
+    "対応プロバイダーは定型操作を自動承認します。その他は確認を求めます。",
+  "runtimeMode.fullAccess.label": "フルアクセス",
+  "runtimeMode.fullAccess.description": "プロンプトなしでコマンドや編集を許可します。",
+  "envMode.local": "現在のチェックアウト",
+  "envMode.worktree": "新しいワークツリー",
+};
+
 export const zhHansMessages: Partial<Record<keyof typeof enMessages, string>> = {
   "runtimeMode.approvalRequired.label": "需要批准",
   "runtimeMode.approvalRequired.description": "执行命令和改文件之前先询问。",

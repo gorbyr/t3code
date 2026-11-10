@@ -44,6 +44,47 @@ export const enMessages = {
   "settings.diffs.prLinksInApp.a11y": "Open pull requests in T3 Code",
 } as const;
 
+export const jaMessages: Partial<Record<keyof typeof enMessages, string>> = {
+  "settings.diffs.title": "差分",
+  "settings.diffs.layout.title": "差分レイアウト",
+  "settings.diffs.layout.description":
+    "差分を上下に重ねるか左右に分割して表示します。差分ツールバーのトグルでも変更できます。",
+  "settings.diffs.layout.resetLabel": "差分レイアウト",
+  "settings.diffs.layout.a11y": "差分レイアウト",
+  "settings.diffs.layout.stacked": "上下に重ねる",
+  "settings.diffs.layout.split": "左右に分割",
+  "settings.diffs.whitespace.title": "空白の変更を非表示",
+  "settings.diffs.whitespace.description":
+    "差分パネルがデフォルトで空白のみの編集を無視するかどうかを設定します。",
+  "settings.diffs.whitespace.resetLabel": "空白の変更",
+  "settings.diffs.whitespace.a11y": "デフォルトで空白の変更を非表示",
+  "settings.diffs.fileState.title": "差分ファイルの状態",
+  "settings.diffs.fileState.description":
+    "差分やプルリクエストのコードタブを開く際、ファイルを展開または折りたたみ状態で開始します。",
+  "settings.diffs.fileState.resetLabel": "デフォルトの差分ファイル状態",
+  "settings.diffs.fileState.a11y": "デフォルトの差分ファイル状態",
+  "settings.diffs.fileState.expanded": "展開",
+  "settings.diffs.fileState.collapsed": "折りたたみ",
+  "settings.diffs.colors.title": "差分の色",
+  "settings.diffs.colors.description": "追加と削除の色、変更数などを選択します。",
+  "settings.diffs.colors.resetLabel": "差分の色",
+  "settings.diffs.colors.a11y": "差分の色",
+  "settings.diffs.colors.redGreen": "赤と緑",
+  "settings.diffs.colors.redGreenDefault": "赤と緑（デフォルト）",
+  "settings.diffs.colors.blueOrange": "青とオレンジ",
+  "settings.diffs.pullRequests.title": "プルリクエスト",
+  "settings.diffs.proactivePanels.title": "プルリクエストと変更パネルを自動表示",
+  "settings.diffs.proactivePanels.description":
+    "リンクされたプルリクエストを先に開きます。それ以外は、3ファイル以上または50行の編集の変更を開きます。",
+  "settings.diffs.proactivePanels.resetLabel": "自動パネル",
+  "settings.diffs.proactivePanels.a11y": "プルリクエストと変更パネルを自動表示",
+  "settings.diffs.prLinksInApp.title": "T3 Codeでプルリクエストを開く",
+  "settings.diffs.prLinksInApp.description":
+    "プルリクエストリンクをクリックするとT3 Codeで開きます。オフにすると、gitホストで他のリンクと同様に開きます。",
+  "settings.diffs.prLinksInApp.resetLabel": "T3 Codeでプルリクエストを開く",
+  "settings.diffs.prLinksInApp.a11y": "T3 Codeでプルリクエストを開く",
+};
+
 export const zhHansMessages: Partial<Record<keyof typeof enMessages, string>> = {
   "settings.diffs.title": "差异",
   "settings.diffs.layout.title": "差异布局",

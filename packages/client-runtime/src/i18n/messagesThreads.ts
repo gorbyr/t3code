@@ -139,6 +139,144 @@ export const enMessages = {
   "settings.threads.snoozeEditor.removeA11y": "Remove snooze option {index}",
 } as const;
 
+export const jaMessages: Partial<Record<keyof typeof enMessages, string>> = {
+  "settings.threads.newProjects.title": "新規プロジェクト",
+  "settings.threads.addProjectBase.title": "プロジェクトの開始場所を追加",
+  "settings.threads.addProjectBase.description":
+    'Add Project ブラウザを開く際に空のままにすると "~/" が使用されます。',
+  "settings.threads.addProjectBase.resetLabel": "プロジェクトのベースディレクトリ",
+  "settings.threads.addProjectBase.a11y": "プロジェクトのベースディレクトリ",
+  "settings.threads.newThreads.title": "新しいスレッド",
+  "settings.threads.model.title": "モデル",
+  "settings.threads.model.descriptionProject": "このプロジェクトの新しいスレッド用モデル。",
+  "settings.threads.model.descriptionAutomatic":
+    "新しいスレッドのデフォルトモデル。自動的に選択されます。プロジェクトで上書き可能です。",
+  "settings.threads.model.description":
+    "新しいスレッドのデフォルトモデル。プロジェクトで上書き可能です。",
+  "settings.threads.model.mixedAutomatic":
+    "自動的にデフォルトが異なります。環境を1つ選択するか、共有モデルを選んで作業量を編集してください。",
+  "settings.threads.model.mixed":
+    "デフォルトが異なります。環境を1つ選択するか、共有モデルを選んで作業量を編集してください。",
+  "settings.threads.model.resetLabel": "デフォルトモデル",
+  "settings.threads.model.automaticMixed": "自動（混合）",
+  "settings.threads.model.notSaved": "デフォルトモデルが保存されていません",
+  "settings.threads.noProviders": "利用可能なプロバイダーがありません",
+  "settings.threads.workspace.title": "ワークツリー",
+  "settings.threads.workspace.descriptionProject": "このプロジェクトの新しいスレッドの開始場所。",
+  "settings.threads.workspace.description":
+    "新しいスレッドの開始場所。プロジェクトや t3.json で上書き可能です。",
+  "settings.threads.workspace.resetLabel": "デフォルトワークツリー",
+  "settings.threads.workspace.a11y": "デフォルトワークツリー",
+  "settings.threads.workspace.unavailable": "利用不可",
+  "settings.threads.fallback.title": "フォールバックモデル",
+  "settings.threads.fallback.description":
+    "デフォルトモデルのプロバイダーが使用不可の場合の新しいスレッド用。",
+  "settings.threads.fallback.resetLabel": "フォールバックモデル",
+  "settings.threads.fallback.a11y": "フォールバックモデル",
+  "settings.threads.fallback.none": "なし",
+  "settings.threads.fallback.notSaved": "フォールバックモデルが保存されていません",
+  "settings.threads.permissions.title": "権限",
+  "settings.threads.permissions.descriptionProject": "このプロジェクトの新しいスレッド用権限。",
+  "settings.threads.permissions.description":
+    "新しいスレッドのデフォルト権限。プロジェクトで上書き可能です。",
+  "settings.threads.permissions.resetLabel": "デフォルト権限",
+  "settings.threads.permissions.a11y": "デフォルト権限",
+  "settings.threads.snooze.title": "スヌーズ",
+  "settings.threads.snoozeOptions.title": "スヌーズオプション",
+  "settings.threads.snoozeOptions.description":
+    "各スヌーズメニューの選択肢。最も早いものが先頭に表示されます。平日は次の今日以降を意味します。",
+  "settings.threads.snoozeOptions.resetLabel": "スヌーズオプション",
+  "settings.threads.usageLimits.title": "使用制限",
+  "settings.threads.autoResume.title": "使用制限後の再開",
+  "settings.threads.autoResume.description":
+    "使用制限がリセットされたときにスレッドを自動的に再開します。各スレッドで自動再開をキャンセルできます。",
+  "settings.threads.autoResume.a11y": "使用制限後の再開",
+  "settings.threads.snoozeLimited.title": "制限リセットまでスヌーズ",
+  "settings.threads.snoozeLimited.description":
+    "スレッドの使用制限がリセットされるまでスヌーズします。自動再開を有効にすると、リセット後にエージェントを継続できます。",
+  "settings.threads.snoozeLimited.a11y": "制限リセットまでスヌーズ",
+  "settings.threads.autoSettle.title": "自動決済",
+  "settings.threads.autoSettleMerged.title": "マージされたスレッドの自動決済",
+  "settings.threads.autoSettleMerged.description":
+    "プルリクエストがマージされたときにスレッドを決済します。クローズされたプルリクエストも自動的に決済されます。",
+  "settings.threads.autoSettleMerged.resetLabel": "マージ時に自動決済",
+  "settings.threads.autoSettleMerged.a11y": "マージされたスレッドの自動決済",
+  "settings.threads.autoSettleInactive.title": "非アクティブなスレッドの自動決済",
+  "settings.threads.autoSettleInactive.description":
+    "この期間サイドバーのスレッドにアクティビティがないと自動的に決済されます。",
+  "settings.threads.autoSettleInactive.resetLabel": "自動決済",
+  "settings.threads.autoSettleInactive.a11y": "非アクティブなスレッドの自動決済",
+  "settings.threads.autoSettleDays.title": "非アクティブ日数の自動決済",
+  "settings.threads.autoSettleDays.description":
+    "新しいアクティビティがあるとスレッドは自動的に未決済になります。",
+  "settings.threads.autoSettleDays.a11y": "非アクティブ日数の自動決済",
+  "settings.threads.keepPullRequests.title": "PR のあるスレッドを保持",
+  "settings.threads.keepPullRequests.description":
+    "プルリクエストがあるスレッドは非アクティブでも決済されません。マージとクローズは依然として決済します。",
+  "settings.threads.keepPullRequests.a11y": "PR のあるスレッドを保持",
+  "settings.threads.textGeneration.title": "テキスト生成",
+  "settings.threads.textGenerationModel.title": "テキスト生成モデル",
+  "settings.threads.textGenerationModel.description":
+    "接続されたこのプロバイダーのデバイスでスレッドタイトルやその他の生成テキストに使用されます。ソース管理で上書きできます。",
+  "settings.threads.textGenerationModel.resetLabel": "テキスト生成モデル",
+  "settings.threads.textGenerationModel.connectEnvironment":
+    "環境を選択してそのテキスト生成モデルに接続します。",
+  "settings.threads.textGenerationModel.noProviders": "テキスト生成プロバイダーがありません。",
+  "settings.threads.textGenerationModel.notSaved": "テキスト生成モデルが保存されていません",
+  "settings.threads.titleInstructions.title": "スレッドタイトル指示",
+  "settings.threads.titleInstructions.description":
+    "新規および再生成されたスレッドタイトルのプロンプトに追加されます。",
+  "settings.threads.titleInstructions.resetLabel": "スレッドタイトル指示",
+  "settings.threads.titleInstructions.a11y": "スレッドタイトル指示",
+  "settings.threads.titleInstructions.placeholder":
+    "タイトルは数語に留めます。主旨を先頭にしてください。",
+  "settings.threads.titleInstructions.placeholderMixed":
+    "混合。選択したすべての対象に適用する指示を入力してください。",
+  "settings.threads.responseStreaming.title": "レスポンスストリーミング",
+  "settings.threads.responseStreaming.mixed":
+    "選択された対象は異なるストリーミングモードを使用しています。",
+  "settings.threads.responseStreaming.resetLabel": "レスポンスストリーミング",
+  "settings.threads.responseStreaming.a11y": "レスポンスストリーミング",
+  "settings.threads.responseStreaming.turn": "完全な応答を待機",
+  "settings.threads.responseStreaming.paragraph": "完了した段落を表示",
+  "settings.threads.responseStreaming.turnDescription":
+    "エージェントがターンを完了するとテキストが表示されます。",
+  "settings.threads.responseStreaming.paragraphDescription":
+    "各段落またはコードブロックが完了するとすぐに表示されます。",
+  "settings.threads.snoozeEditor.when": "いつ",
+  "settings.threads.snoozeEditor.after": "以降",
+  "settings.threads.snoozeEditor.today": "今日",
+  "settings.threads.snoozeEditor.tomorrow": "明日",
+  "settings.threads.snoozeEditor.monday": "月曜日",
+  "settings.threads.snoozeEditor.tuesday": "火曜日",
+  "settings.threads.snoozeEditor.wednesday": "水曜日",
+  "settings.threads.snoozeEditor.thursday": "木曜日",
+  "settings.threads.snoozeEditor.friday": "金曜日",
+  "settings.threads.snoozeEditor.saturday": "土曜日",
+  "settings.threads.snoozeEditor.sunday": "日曜日",
+  "settings.threads.snoozeEditor.minute": "分",
+  "settings.threads.snoozeEditor.minutes": "分",
+  "settings.threads.snoozeEditor.hour": "時間",
+  "settings.threads.snoozeEditor.hours": "時間",
+  "settings.threads.snoozeEditor.day": "日",
+  "settings.threads.snoozeEditor.days": "日",
+  "settings.threads.snoozeEditor.at": "に",
+  "settings.threads.snoozeEditor.time": "時間",
+  "settings.threads.snoozeEditor.unit": "単位",
+  "settings.threads.snoozeEditor.amount": "量",
+  "settings.threads.snoozeEditor.decrease": "減らす",
+  "settings.threads.snoozeEditor.increase": "増やす",
+  "settings.threads.snoozeEditor.passedToday": "本日の経過",
+  "settings.threads.snoozeEditor.duplicate": "上記の重複",
+  "settings.threads.snoozeEditor.sameTime": "上記の同時間",
+  "settings.threads.snoozeEditor.menuOnlyCustom": "メニューはカスタムのみ…",
+  "settings.threads.snoozeEditor.menuNow": "今すぐ: {options}",
+  "settings.threads.snoozeEditor.add": "オプション追加",
+  "settings.threads.snoozeEditor.max": "最大 {count} オプション",
+  "settings.threads.snoozeEditor.optionA11y": "スヌーズオプション {index}",
+  "settings.threads.snoozeEditor.removeA11y": "スヌーズオプション {index} を削除",
+};
+
 export const zhHansMessages: Partial<Record<keyof typeof enMessages, string>> = {
   "settings.threads.newProjects.title": "新项目",
   "settings.threads.addProjectBase.title": "添加项目的起始位置",

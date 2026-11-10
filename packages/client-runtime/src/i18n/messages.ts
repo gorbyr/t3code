@@ -62,6 +62,65 @@ export const enMessages = {
   "settings.interface.composerContext.a11y": "Keep composer context visible in active threads",
 } as const;
 
+export const jaMessages: Partial<Record<keyof typeof enMessages, string>> = {
+  "settings.interface.title": "インターフェース",
+  "settings.interface.language.title": "言語",
+  "settings.interface.language.description": "インターフェースの言語を選択します。",
+  "settings.interface.language.a11y": "インターフェース言語",
+  "settings.interface.language.system": "システム既定",
+  "settings.interface.contrast.title": "コントラスト",
+  "settings.interface.contrast.resetLabel": "コントラスト",
+  "settings.interface.contrast.description":
+    "インターフェース全体の色と枠線のコントラストを調整します。",
+  "settings.interface.contrast.a11y": "コントラスト",
+  "settings.interface.glassOpacity.title": "ガラスの不透明度",
+  "settings.interface.glassOpacity.resetLabel": "ガラスの不透明度",
+  "settings.interface.glassOpacity.description":
+    "値を大きくすると、メニュー、ダイアログ、コンポーザーがより実体感を持ちます。",
+  "settings.interface.glassOpacity.a11y": "ガラスの不透明度",
+  "settings.interface.chatWidth.title": "チャット幅",
+  "settings.interface.chatWidth.resetLabel": "チャット幅",
+  "settings.interface.chatWidth.description":
+    "大画面でメッセージとコンポーザーが拡張できる幅を設定します。",
+  "settings.interface.chatWidth.a11y": "チャット幅",
+  "settings.interface.chatWidth.comfortable": "快適（既定）",
+  "settings.interface.chatWidth.wide": "ワイド",
+  "settings.interface.chatWidth.full": "全幅",
+  "settings.interface.effortDisplay.title": "努力表示",
+  "settings.interface.effortDisplay.resetLabel": "努力表示",
+  "settings.interface.effortDisplay.description":
+    "High などの努力名やバーとして、コンポーザーに推論の努力を表示します。",
+  "settings.interface.effortDisplay.a11y": "努力表示",
+  "settings.interface.effortDisplay.word": "単語（既定）",
+  "settings.interface.effortDisplay.bars": "バー",
+  "settings.interface.mathRendering.title": "数式レンダリング",
+  "settings.interface.mathRendering.resetLabel": "数式レンダリング",
+  "settings.interface.mathRendering.description":
+    "メッセージやマークダウンプレビューで LaTeX 数式（例: $x^2$ や \\[x^2\\]）をタイプセットします。コンポーザーは TeX ソースを編集可能です。",
+  "settings.interface.mathRendering.a11y": "数式をレンダリング",
+  "settings.interface.panelAnimations.title": "パネルアニメーション",
+  "settings.interface.panelAnimations.resetLabel": "パネルアニメーション",
+  "settings.interface.panelAnimations.description": "パネルの開閉速度を設定します。",
+  "settings.interface.panelAnimations.a11y": "パネルアニメーションの持続時間",
+  "settings.interface.environmentIdentification.title": "環境の識別",
+  "settings.interface.environmentIdentification.resetLabel": "環境の識別",
+  "settings.interface.environmentIdentification.description.stages":
+    "Dev 環境と Nightly 環境の識別方法を選択します。",
+  "settings.interface.environmentIdentification.description.header":
+    "サイドバーヘッダーに Dev または Nightly のアートワークを表示します。",
+  "settings.interface.environmentIdentification.a11y": "環境の識別",
+  "settings.interface.environmentIdentification.artwork": "アートワーク",
+  "settings.interface.environmentIdentification.nightlyArtwork": "ナイトリーアートワーク",
+  "settings.interface.environmentIdentification.devArtwork": "開発アートワーク",
+  "settings.interface.environmentIdentification.pill": "バージョンピル",
+  "settings.interface.environmentIdentification.none": "なし",
+  "settings.interface.composerContext.title": "コンポーザーコンテキスト",
+  "settings.interface.composerContext.resetLabel": "composer context",
+  "settings.interface.composerContext.description":
+    "スレッド開始後、コンポーザー下のブランチとワークツリーのコントロールを保持します。",
+  "settings.interface.composerContext.a11y": "アクティブなスレッドでコンポーザーコンテキストを表示",
+};
+
 export const zhHansMessages: Partial<Record<keyof typeof enMessages, string>> = {
   "settings.interface.title": "界面",
   "settings.interface.language.title": "语言",

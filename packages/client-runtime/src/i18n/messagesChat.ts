@@ -35,6 +35,37 @@ export const enMessages = {
   "settings.chat.followUpBehavior.steer": "Steer",
 } as const;
 
+export const jaMessages: Partial<Record<keyof typeof enMessages, string>> = {
+  "settings.chat.composer.title": "コンポーザー",
+  "settings.chat.richText.title": "リッチテキストコンポーザー",
+  "settings.chat.richText.description": "入力時にフォーマットされたMarkdownを表示します。",
+  "settings.chat.richText.resetLabel": "リッチテキストコンポーザー",
+  "settings.chat.richText.a11y": "リッチテキストコンポーザー",
+  "settings.chat.sendShortcut.title": "送信ショートカット",
+  "settings.chat.sendShortcut.description": "Enter がプロンプト送信か改行挿入かを選択します。",
+  "settings.chat.sendShortcut.resetLabel": "送信ショートカット",
+  "settings.chat.sendShortcut.a11y": "送信ショートカット",
+  "settings.chat.sendShortcut.enter": "Enter",
+  "settings.chat.sendShortcut.modEnterMultiline": "{mod} + Enter で複数行プロンプト",
+  "settings.chat.sendShortcut.modEnter": "{mod} + Enter 常に",
+  "settings.chat.skillsInSlashMenu.title": "スラッシュメニューにスキルを表示",
+  "settings.chat.skillsInSlashMenu.description":
+    "/ コマンドメニューにスキルを含めます。スキルは $ と入力すると常に表示されます。",
+  "settings.chat.skillsInSlashMenu.resetLabel": "スラッシュメニューのスキル",
+  "settings.chat.skillsInSlashMenu.a11y": "スラッシュメニューにスキルを表示",
+  "settings.chat.followUps.title": "フォローアップ",
+  "settings.chat.followUpBehavior.title": "フォローアップの動作",
+  "settings.chat.followUpBehavior.description":
+    "エージェント実行中にフォローアップをキューに入れるか現在の実行を操作します。 {opposite}",
+  "settings.chat.followUpBehavior.oppositeMultiline":
+    "単一行は {mod} + Enter、複数行は {mod} + Shift + Enter で逆の操作（1メッセージ）",
+  "settings.chat.followUpBehavior.opposite": "{shortcut} + Enter で逆の操作（1メッセージ）",
+  "settings.chat.followUpBehavior.resetLabel": "フォローアップの動作",
+  "settings.chat.followUpBehavior.a11y": "フォローアップの動作",
+  "settings.chat.followUpBehavior.queue": "キューに入れる",
+  "settings.chat.followUpBehavior.steer": "操作する",
+};
+
 export const zhHansMessages: Partial<Record<keyof typeof enMessages, string>> = {
   "settings.chat.composer.title": "输入框",
   "settings.chat.richText.title": "富文本输入框",

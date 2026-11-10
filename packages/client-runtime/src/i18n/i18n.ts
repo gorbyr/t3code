@@ -1,41 +1,103 @@
 import type { UiLanguage } from "@t3tools/contracts";
 
-import { enMessages as chatEn, zhHansMessages as chatZh } from "./messagesChat.ts";
-import { enMessages as diffsEn, zhHansMessages as diffsZh } from "./messagesDiffs.ts";
-import { enMessages as generalEn, zhHansMessages as generalZh } from "./messagesGeneral.ts";
-import { enMessages as threadsEn, zhHansMessages as threadsZh } from "./messagesThreads.ts";
+import {
+  enMessages as chatEn,
+  jaMessages as chatJa,
+  zhHansMessages as chatZh,
+} from "./messagesChat.ts";
+import {
+  enMessages as diffsEn,
+  jaMessages as diffsJa,
+  zhHansMessages as diffsZh,
+} from "./messagesDiffs.ts";
+import {
+  enMessages as generalEn,
+  jaMessages as generalJa,
+  zhHansMessages as generalZh,
+} from "./messagesGeneral.ts";
+import {
+  enMessages as threadsEn,
+  jaMessages as threadsJa,
+  zhHansMessages as threadsZh,
+} from "./messagesThreads.ts";
 import {
   enMessages as settingsProvidersEn,
+  jaMessages as settingsProvidersJa,
   zhHansMessages as settingsProvidersZh,
 } from "./messagesSettingsProviders.ts";
 import {
   enMessages as settingsCodeEn,
+  jaMessages as settingsCodeJa,
   zhHansMessages as settingsCodeZh,
 } from "./messagesSettingsCode.ts";
 import {
   enMessages as settingsSystemEn,
+  jaMessages as settingsSystemJa,
   zhHansMessages as settingsSystemZh,
 } from "./messagesSettingsSystem.ts";
-import { enMessages as chatUiEn, zhHansMessages as chatUiZh } from "./messagesChatUi.ts";
-import { enMessages as appAEn, zhHansMessages as appAZh } from "./messagesAppA.ts";
-import { enMessages as appBEn, zhHansMessages as appBZh } from "./messagesAppB.ts";
-import { enMessages as reviewEn, zhHansMessages as reviewZh } from "./messagesReview.ts";
-import { enMessages as deviceEn, zhHansMessages as deviceZh } from "./messagesDevice.ts";
+import {
+  enMessages as chatUiEn,
+  jaMessages as chatUiJa,
+  zhHansMessages as chatUiZh,
+} from "./messagesChatUi.ts";
+import {
+  enMessages as appAEn,
+  jaMessages as appAJa,
+  zhHansMessages as appAZh,
+} from "./messagesAppA.ts";
+import {
+  enMessages as appBEn,
+  jaMessages as appBJa,
+  zhHansMessages as appBZh,
+} from "./messagesAppB.ts";
+import {
+  enMessages as reviewEn,
+  jaMessages as reviewJa,
+  zhHansMessages as reviewZh,
+} from "./messagesReview.ts";
+import {
+  enMessages as deviceEn,
+  jaMessages as deviceJa,
+  zhHansMessages as deviceZh,
+} from "./messagesDevice.ts";
 import {
   enMessages as voiceSettingsEn,
+  jaMessages as voiceSettingsJa,
   zhHansMessages as voiceSettingsZh,
 } from "./messagesVoiceSettings.ts";
-import { enMessages as voiceChatEn, zhHansMessages as voiceChatZh } from "./messagesVoiceChat.ts";
+import {
+  enMessages as voiceChatEn,
+  jaMessages as voiceChatJa,
+  zhHansMessages as voiceChatZh,
+} from "./messagesVoiceChat.ts";
 import {
   enMessages as voiceSpeechEn,
+  jaMessages as voiceSpeechJa,
   zhHansMessages as voiceSpeechZh,
 } from "./messagesVoiceSpeech.ts";
-import { enMessages as miscEn, zhHansMessages as miscZh } from "./messagesMisc.ts";
-import { enMessages as runtimeEn, zhHansMessages as runtimeZh } from "./messagesRuntime.ts";
-import { enMessages as interfaceEn, zhHansMessages as interfaceZh } from "./messages.ts";
-import { enMessages as navEn, zhHansMessages as navZh } from "./messagesSettingsNav.ts";
+import {
+  enMessages as miscEn,
+  jaMessages as miscJa,
+  zhHansMessages as miscZh,
+} from "./messagesMisc.ts";
+import {
+  enMessages as runtimeEn,
+  jaMessages as runtimeJa,
+  zhHansMessages as runtimeZh,
+} from "./messagesRuntime.ts";
+import {
+  enMessages as interfaceEn,
+  jaMessages as interfaceJa,
+  zhHansMessages as interfaceZh,
+} from "./messages.ts";
+import {
+  enMessages as navEn,
+  jaMessages as navJa,
+  zhHansMessages as navZh,
+} from "./messagesSettingsNav.ts";
 import {
   enMessages as typographyEn,
+  jaMessages as typographyJa,
   zhHansMessages as typographyZh,
 } from "./messagesTypography.ts";
 
@@ -92,9 +154,33 @@ const zhCatalog: Partial<Record<MessageKey, string>> = {
   ...typographyZh,
 };
 
+const jaCatalog: Partial<Record<MessageKey, string>> = {
+  ...interfaceJa,
+  ...generalJa,
+  ...chatJa,
+  ...diffsJa,
+  ...threadsJa,
+  ...chatUiJa,
+  ...appAJa,
+  ...appBJa,
+  ...settingsProvidersJa,
+  ...settingsCodeJa,
+  ...settingsSystemJa,
+  ...reviewJa,
+  ...runtimeJa,
+  ...navJa,
+  ...deviceJa,
+  ...voiceSettingsJa,
+  ...voiceChatJa,
+  ...voiceSpeechJa,
+  ...miscJa,
+  ...typographyJa,
+};
+
 export const localeMessages: Record<UiLocale, Partial<Record<MessageKey, string>>> = {
   en: enCatalog,
   "zh-Hans": zhCatalog,
+  ja: jaCatalog,
 };
 
 export type TranslateParams = Record<string, string | number>;
@@ -102,15 +188,16 @@ export type TranslateParams = Record<string, string | number>;
 export type TranslateFn = (key: MessageKey, params?: TranslateParams) => string;
 
 /**
- * Resolves the "system" setting against the host locale. Any non-Chinese host
- * locale falls back to English; Chinese variants (zh-CN, zh-TW, ...) all map to
- * the single zh-Hans catalog.
+ * Resolves the "system" setting against the host locale. Japanese uses the ja
+ * catalog; Chinese variants all map to the single zh-Hans catalog.
  */
 export function resolveUiLocale(language: UiLanguage, systemLocale: string): UiLocale {
   if (language !== "system") {
     return language;
   }
-  return systemLocale.toLowerCase().split("-")[0] === "zh" ? "zh-Hans" : "en";
+  const languageCode = systemLocale.toLowerCase().split(/[-_]/)[0];
+  if (languageCode === "ja") return "ja";
+  return languageCode === "zh" ? "zh-Hans" : "en";
 }
 
 export function translateMessage(

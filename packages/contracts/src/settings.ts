@@ -67,7 +67,7 @@ export type TimestampFormat = typeof TimestampFormat.Type;
 const DEFAULT_TIMESTAMP_FORMAT: TimestampFormat = "locale";
 
 // "system" resolves against the device locale at read time, client-side only.
-export const UiLanguage = Schema.Literals(["system", "en", "zh-Hans"]);
+export const UiLanguage = Schema.Literals(["system", "en", "zh-Hans", "ja"]);
 export type UiLanguage = typeof UiLanguage.Type;
 const DEFAULT_UI_LANGUAGE: UiLanguage = "system";
 

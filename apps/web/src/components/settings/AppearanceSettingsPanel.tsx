@@ -44,6 +44,7 @@ import { ThreadDetailsItemsRow } from "./ThreadDetailsItemsRow";
 const UI_LANGUAGE_NAMES: Record<Exclude<UiLanguage, "system">, string> = {
   en: "English",
   "zh-Hans": "简体中文",
+  ja: "日本語",
 };
 
 const ENVIRONMENT_IDENTIFICATION_LABELS: Record<EnvironmentIdentificationMode, MessageKey> = {
@@ -189,7 +190,7 @@ export function AppearanceSettingsPanel() {
               <Select
                 value={settings.uiLanguage}
                 onValueChange={(value) => {
-                  if (value === "system" || value === "en" || value === "zh-Hans")
+                  if (value === "system" || value === "en" || value === "zh-Hans" || value === "ja")
                     updateSettings({ uiLanguage: value });
                 }}
               >

@@ -75,6 +75,78 @@ export const enMessages = {
   "settings.general.timeFormat.24hour": "24-hour",
 } as const;
 
+export const jaMessages: Partial<Record<keyof typeof enMessages, string>> = {
+  "settings.general.notifications.title": "通知",
+  "settings.general.threadNotifications.title": "スレッド通知",
+  "settings.general.threadNotifications.description":
+    "スレッド完了、失敗、入力や承認が必要なときのシステムアラートです。T3 Codeが開いている間、このデバイスに適用されます。",
+  "settings.general.threadNotifications.a11y": "スレッド通知",
+  "settings.general.threadNotifications.unsupported":
+    "通知には対応ブラウザのHTTPSまたはデスクトップアプリが必要です。サウンドのみはまだ利用可能です。",
+  "settings.general.threadNotifications.unavailable":
+    "このブラウザでは通知を利用できません。サウンドのみはまだ利用可能です。",
+  "settings.general.threadNotifications.denied":
+    "ブラウザまたはシステム設定で通知を許可してから、再度このオプションを選択してください。サウンドのみは引き続き利用可能です。",
+  "settings.general.threadNotifications.mode.off": "オフ",
+  "settings.general.threadNotifications.mode.notifications": "通知のみ",
+  "settings.general.threadNotifications.mode.sound": "サウンドのみ",
+  "settings.general.threadNotifications.mode.notificationsAndSound": "通知とサウンド",
+  "settings.general.inAppNotifications.title": "アプリ内通知",
+  "settings.general.inAppNotifications.description":
+    "このアプリがフォーカスされている間に、他のスレッド完了、失敗、入力や承認が必要なときのトーストを表示します。",
+  "settings.general.inAppNotifications.a11y": "アプリ内通知",
+  "settings.general.sidebar.title": "サイドバー",
+  "settings.general.projectGrouping.title": "プロジェクトのグループ化",
+  "settings.general.projectGrouping.description": "環境間で一致するリポジトリを組み合わせます。",
+  "settings.general.projectGrouping.resetLabel": "プロジェクトのグループ化",
+  "settings.general.projectGrouping.a11y": "プロジェクトのグループ化",
+  "settings.general.projectOrder.title": "プロジェクトの順序",
+  "settings.general.projectOrder.description":
+    "サイドバーのプロジェクト選択とコマンドパレットでのプロジェクトの順序です。",
+  "settings.general.projectOrder.resetLabel": "プロジェクトの順序",
+  "settings.general.projectOrder.a11y": "プロジェクトの順序",
+  "settings.general.projectOrder.updatedAt": "最終メッセージ",
+  "settings.general.projectOrder.createdAt": "作成日時",
+  "settings.general.projectOrder.manual": "手動",
+  "settings.general.workingShelf.title": "作業セクション",
+  "settings.general.workingShelf.description":
+    "作業と監視スレッドを作業セクションに折りたたみます。必要なときに受信箱の先頭に戻ります。Labsの退屈なサイドバーには作業セクションがありません。",
+  "settings.general.workingShelf.resetLabel": "作業セクション",
+  "settings.general.workingShelf.a11y": "作業セクション",
+  "settings.general.confirmations.title": "確認",
+  "settings.general.unpinConfirmation.title": "ピン解除の確認",
+  "settings.general.unpinConfirmation.description":
+    "ピン解除セクションからスレッドを外す前に確認します。",
+  "settings.general.unpinConfirmation.resetLabel": "ピン解除の確認",
+  "settings.general.unpinConfirmation.a11y": "スレッドのピン解除を確認",
+  "settings.general.archiveConfirmation.title": "アーカイブの確認",
+  "settings.general.archiveConfirmation.description":
+    "スレッドをアーカイブする前に二回クリックが必要です。",
+  "settings.general.archiveConfirmation.resetLabel": "アーカイブの確認",
+  "settings.general.archiveConfirmation.a11y": "スレッドのアーカイブを確認",
+  "settings.general.deleteConfirmation.title": "削除の確認",
+  "settings.general.deleteConfirmation.description":
+    "スレッドとそのチャット履歴を削除する前に確認します。",
+  "settings.general.deleteConfirmation.resetLabel": "削除の確認",
+  "settings.general.deleteConfirmation.a11y": "スレッドの削除を確認",
+  "settings.general.quitConfirmation.title": "終了ショートカット",
+  "settings.general.quitConfirmation.description": "ホールドモードも二回連続で押すと終了します。",
+  "settings.general.quitConfirmation.resetLabel": "終了ショートカットの動作",
+  "settings.general.quitConfirmation.a11y": "終了ショートカットの動作",
+  "settings.general.quitConfirmation.direct": "直接",
+  "settings.general.quitConfirmation.hold": "ホールド",
+  "settings.general.quitConfirmation.doubleClick": "ダブルクリック",
+  "settings.general.display.title": "表示",
+  "settings.general.timeFormat.title": "時間形式",
+  "settings.general.timeFormat.description":
+    "システムのデフォルトはブラウザまたは OS の時計設定に従います。",
+  "settings.general.timeFormat.resetLabel": "時間形式",
+  "settings.general.timeFormat.a11y": "タイムスタンプ形式",
+  "settings.general.timeFormat.locale": "システムデフォルト",
+  "settings.general.timeFormat.12hour": "12時間制",
+  "settings.general.timeFormat.24hour": "24時間制",
+};
+
 export const zhHansMessages: Partial<Record<keyof typeof enMessages, string>> = {
   "settings.general.notifications.title": "通知",
   "settings.general.threadNotifications.title": "会话通知",

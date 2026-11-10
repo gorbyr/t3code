@@ -52,6 +52,53 @@ export const enMessages = {
   "settings.threadDetails.summaryA11y": "Thread details: {enabled} of {total} on",
 } as const;
 
+export const jaMessages: Partial<Record<keyof typeof enMessages, string>> = {
+  "settings.typography.title": "タイポグラフィ",
+  "settings.typography.systemDefault": "システム既定",
+  "settings.typography.systemMonospace": "システム等幅",
+  "settings.typography.interfaceFont.title": "インターフェースフォント",
+  "settings.typography.interfaceFont.description": "コードブロックとターミナル以外のすべて。",
+  "settings.typography.interfaceFont.sizeLabel": "インターフェースフォントサイズ",
+  "settings.typography.interfaceFont.familyA11y": "インターフェースフォントファミリー",
+  "settings.typography.promptFont.title": "プロンプトフォント",
+  "settings.typography.promptFont.description":
+    "プロンプトを入力するボックスのみ。等幅が適しています。",
+  "settings.typography.promptFont.sizeLabel": "プロンプトフォントサイズ",
+  "settings.typography.promptFont.familyA11y": "プロンプトフォントファミリー",
+  "settings.typography.codeFont.title": "コードフォント",
+  "settings.typography.codeFont.description": "コードブロック、差分、ファイルプレビュー。",
+  "settings.typography.codeFont.sizeLabel": "コードフォントサイズ",
+  "settings.typography.codeFont.familyA11y": "コードフォントファミリー",
+  "settings.typography.monospaceFont.title": "等幅フォント",
+  "settings.typography.monospaceFont.description":
+    "コードブロック、差分、ファイルプレビュー、ターミナル。",
+  "settings.typography.monospaceFont.familyA11y": "等幅フォントファミリー",
+  "settings.typography.terminalFont.title": "ターミナルフォント",
+  "settings.typography.terminalFont.description": "ターミナル出力、コードブロックや差分とは別。",
+  "settings.typography.terminalFont.sizeLabel": "ターミナルフォントサイズ",
+  "settings.typography.terminalFont.familyA11y": "ターミナルフォントファミリー",
+  "settings.typography.separateFonts.title": "別フォント",
+  "settings.typography.separateFonts.description":
+    "プロンプト、コード、ターミナルフォントを個別に設定します。1つの等幅フォントの代わりに。",
+  "settings.typography.separateFonts.a11y": "別フォント",
+  "settings.typography.fontSmoothing.title": "フォント平滑化",
+  "settings.typography.fontSmoothing.description":
+    "macOS デフォルトの代わりに、薄いグレースケールのテキスト平滑化を使用します。",
+  "settings.typography.fontSmoothing.a11y": "フォント平滑化",
+  "settings.typography.fontSmoothing.resetLabel": "フォント平滑化",
+  "settings.typography.wordWrap.title": "ワードラップ",
+  "settings.typography.wordWrap.description":
+    "コードブロック、差分、ファイルプレビューの長い行をデフォルトで折り返します。",
+  "settings.typography.wordWrap.a11y": "コード、差分、ファイルプレビューをデフォルトで折り返し",
+  "settings.typography.wordWrap.resetLabel": "ワードラップ",
+  "settings.threadDetails.title": "スレッド詳細",
+  "settings.threadDetails.resetLabel": "スレッド詳細",
+  "settings.threadDetails.description":
+    "スレッド詳細カードの表示内容を選択します。カードの右クリックも可能です。",
+  "settings.threadDetails.summary": "{enabled} / {total} がオン",
+  "settings.threadDetails.summaryA11y": "スレッド詳細: {enabled} / {total} がオン",
+};
+
 export const zhHansMessages: Partial<Record<keyof typeof enMessages, string>> = {
   "settings.typography.title": "字体排印",
   "settings.typography.systemDefault": "系统默认",

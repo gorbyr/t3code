@@ -45,6 +45,50 @@ export const enMessages = {
   "app.voiceExtra.worker.superseded": "Replaced by a newer call",
 } as const;
 
+export const jaMessages: Partial<Record<keyof typeof enMessages, string>> = {
+  "voice.speech.transcriptionFailed":
+    "音声文字起こしに失敗しました。設定 → Voice の送信先を確認してください。",
+  "voice.speech.microphoneFallback": "マイクロフォン {index}",
+  "voice.speech.cleanupFailedTitle": "トランスクリプトのクリーンアップに失敗",
+  "voice.speech.cleanupFailedDescription": "元のトランスクリプトが追加されました。",
+  "voice.speech.cleanupUnavailable":
+    "ドラフトの環境がトランスクリプトのクリーンアップに利用できません。",
+  "voice.speech.startFailed": "音声入力を開始できませんでした",
+  "voice.speech.unavailable": "音声入力が利用できません",
+  "voice.speech.modelNotReady": "モデルの準備ができていません。再度ダウンロードしてください。",
+  "voice.speech.modelDownloadFailed":
+    "モデルのダウンロードに失敗しました。環境の接続を確認して再試行してください。",
+  "app.voiceExtra.mcp.requestFailed": "リクエスト失敗。",
+  "app.voiceExtra.mcp.approvalUnavailable": "T3 はここで承認を求められませんでした。",
+  "app.voiceExtra.mcp.toolNotCallable": "このアプリはそのツールを呼び出せません。",
+  "app.voiceExtra.mcp.declined": "ユーザーにより却下されました。",
+  "app.voiceExtra.mcp.linkNeedsClick": "リンクはアプリ内のクリックで開きます。",
+  "app.voiceExtra.mcp.messagesUnavailable": "ここではメッセージを利用できません。",
+  "app.voiceExtra.mcp.allowTool": "{server} に {tool} の実行を許可しますか？\n{arguments}",
+  "app.voiceExtra.mcp.sendMessage": "{server} からこのメッセージを送信しますか？\n{text}",
+  "app.voiceExtra.mcp.saveFiles": "{server} の {files} を保存しますか？",
+  "app.voiceExtra.mcp.fileEmpty": "{file} に内容がありません。",
+  "app.voiceExtra.mcp.fileTooLarge": "{file} は保存するには大きすぎます。",
+  "app.voiceExtra.mcp.loadFailed": "{server} アプリを読み込めません。",
+  "app.voiceExtra.markdown.previewUnavailable": "このクライアントではプレビューを利用できません。",
+  "app.voiceExtra.markdown.environmentDisconnected": "環境が接続されていません。",
+  "app.voiceExtra.link.installCancelled":
+    "リレークライアントのインストールがキャンセルされました。",
+  "app.voiceExtra.link.installIncomplete":
+    "リレークライアントのインストールが完了しましたが、最終ステータスがありません。",
+  "app.voiceExtra.link.wrongEnvironment": "リレーは別の環境の認証情報を返しました。",
+  "app.voiceExtra.link.wrongProvider":
+    "リレーは別のエンドポイントプロバイダーの認証情報を返しました。",
+  "app.voiceExtra.link.notConnected": "環境が接続されていません。",
+  "app.voiceExtra.link.relayUrlMissing": "T3CODE_RELAY_URL が設定されていません。",
+  "app.voiceExtra.worker.unreadableReply": "Office エンジンが読めない返信を送信しました。",
+  "app.voiceExtra.worker.callAborted": "呼び出しが中止されました。",
+  "app.voiceExtra.worker.previewTimeout":
+    "この文書のプレビューに時間がかかりすぎました。別のアプリで開いてください。",
+  "app.voiceExtra.worker.engineClosed": "Office エンジンが閉じられました。",
+  "app.voiceExtra.worker.superseded": "新しい呼び出しに置き換えられました。",
+};
+
 export const zhHansMessages: Partial<Record<keyof typeof enMessages, string>> = {
   "voice.speech.transcriptionFailed": "语音转写失败。请在“设置 → 语音”中检查目标。",
   "voice.speech.microphoneFallback": "麦克风 {index}",
